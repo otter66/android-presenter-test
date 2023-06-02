@@ -32,7 +32,7 @@
 - 상호작용을 테스트하는 것
   ⇒ 기능의 수행 여부, 동작을 검증할 때 용이
 
----
+<br><br><br>
 
 **불필요한 stubbing을 감지하는 방법**
 
@@ -45,17 +45,17 @@
     - 테스트 클래스에 `@MockKExtension.CheckUnnecessaryStub`어노테이션을 추가해 모든 스텁 메서드가 한 번 이상 사용되었는지 확인할 수 있다.
     - 각 테스트가 끝난 후 모든 mock테스트에서 내부적으로 `checkUnnecessaryStub`을 호출하여 불필요한 스터빙이 없는지 확인한다.
 
----
+<br><br><br>
 
-- **relaxed**
-    - https://mockk.io/#relaxed-mock
-    - relaxed mock은 모든 함수에 대해 간단한 값을 반환한다. 각 경우에 대한 동작 지정을 생략 가능하다. 필요한 것은 따로 stubbing하면 된다. 참조 유형의 경우 연쇄 mock이 반환됩니다.
-      사용중인 기능들 자동으로 stubbing되기 때문에 사용중인 기능들을 한눈에 확인할 수 없어짐.
-      ⇒ 테스트를 놓치기 쉬워짐, 사용하지 않는 것이 좋음
-      사용하고 싶다면, 테스트가 귀찮을 뿐이다
-    - generic return types에서는 relaxed mocking이 제대로 작동하지 않는다. 이 경우 일반적으로 클래스 형 변환 예외가 발생. generic return types의 경우 수동으로 stubbing을 선택해야 한다.
+## **relaxed**  
+- https://mockk.io/#relaxed-mock   
+- relaxed mock은 모든 함수에 대해 간단한 값을 반환한다. 각 경우에 대한 동작 지정을 생략 가능하다. 필요한 것은 따로 stubbing하면 된다. 참조 유형의 경우 연쇄 mock이 반환됩니다.    
+사용중인 기능들 자동으로 stubbing되기 때문에 사용중인 기능들을 한눈에 확인할 수 없어짐.   
+⇒ 테스트를 놓치기 쉬워짐, 사용하지 않는 것이 좋음   
+사용하고 싶다면, 테스트가 귀찮을 뿐이다...
+- generic return types에서는 relaxed mocking이 제대로 작동하지 않는다. 이 경우 일반적으로 클래스 형 변환 예외가 발생. generic return types의 경우 수동으로 stubbing을 선택해야 한다.
 
----
+<br><br><br>
 
 ## Test를 더 용이하게, 변경이 적도록, 작성할 수 있는 꿀팁
 
@@ -80,6 +80,8 @@
 - 유연하게
     - 상태 검증도 좋지만, 이번에 연습한 것처럼 기능 수행 여부만으로도 충분하다 생각……..
 - 제어 가능하게(현재시간, 랜덤 사용 등 사용하지 않기)
+
+<br><br><br>
 
 ---
 
